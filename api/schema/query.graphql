@@ -1,4 +1,4 @@
 type Query {
     players: [Player!]!
-    question: String!
+    card: Card!
 }
