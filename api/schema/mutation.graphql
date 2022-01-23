@@ -1,0 +1,4 @@
+type Mutation {
+    createPlayer(name: String!): Player!
+    updatePlayer(score: Int, hasCow: Boolean, answer: String): Player!
+}
