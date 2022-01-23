@@ -1,0 +1,6 @@
+type Player {
+    name: String!
+    score: Int!
+    hasCow: Boolean!
+    answer: String!
+}
