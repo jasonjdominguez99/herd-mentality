@@ -1,7 +1,7 @@
 from ..models.models import Card
 import random
 
-def resolve_card(obj, info):
+def get_card(obj, info):
     available_card_ids = [card.id for card
                           in Card.query.filter_by(has_been_picked=False).all()]
 
