@@ -22,9 +22,11 @@ class Player(db.Model):
 class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     question = db.Column(db.String(255))
+    has_been_picked = db.column(db.Boolean, default=False)
 
     def to_dict(self):
         return {
             "id": self.id,
-            "question": self.question
+            "question": self.question,
+            "has_been_picked": self.has_been_picked
         }
