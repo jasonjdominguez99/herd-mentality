@@ -1,4 +1,4 @@
-from ..models.models import Player, Card
+from ..models.models import Player
 from ariadne import convert_kwargs_to_snake_case
 import uuid
 
@@ -17,7 +17,3 @@ def update_player(_, info, score=None, has_cow=None, answer=None):
         current_player.update_answer(answer)
     
     return current_player
-
-def create_card(*_, question):
-    unique_id = uuid.uuid4()
-    return Card(unique_id.int, question)
