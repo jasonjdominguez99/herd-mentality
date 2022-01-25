@@ -2,4 +2,5 @@ type Mutation {
     createPlayer(name: String!): Player!
     updatePlayer(score: Int, hasCow: Boolean, answer: String): Player!
     createCard(question: String!): Card!
+    updateCard(hasBeenPicked: Boolean!): Card!
 }
