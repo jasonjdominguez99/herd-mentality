@@ -1,4 +1,4 @@
 from ..models.models import Player
 
-def resolve_players(obj, info):
-    players = []
+def get_players(*_):
+    return [player.to_dict() for player in Player.query.all()]
