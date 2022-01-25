@@ -1,4 +1,5 @@
 from email.policy import default
+from hashlib import new
 import flask_sqlalchemy
 
 db = flask_sqlalchemy.SQLAlchemy()
@@ -26,6 +27,15 @@ class Player(db.Model):
             "has_cow": self.has_cow,
             "answer": self.answer
         }
+
+    def add_to_score(self, score):
+        self.score += score
+    
+    def update_has_cow(self, has_cow):
+        self.has_cow = has_cow
+
+    def update_answer(self, new_answer):
+        self.answer = new_answer
 
 class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)
