@@ -54,3 +54,6 @@ class Card(db.Model):
             "question": self.question,
             "has_been_picked": self.has_been_picked
         }
+    
+    def update_has_been_picked(self, has_been_picked):
+        self.has_been_picked = has_been_picked
