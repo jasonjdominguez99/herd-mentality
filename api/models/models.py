@@ -40,7 +40,7 @@ class Player(db.Model):
 class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     question = db.Column(db.String(255))
-    has_been_picked = db.column(db.Boolean, default=False)
+    has_been_picked = db.Column(db.Boolean, default=False)
 
     def __init__(self, id, question):
         super().__init__()
