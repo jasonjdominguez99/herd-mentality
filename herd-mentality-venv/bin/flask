@@ -1,4 +1,4 @@
-#!/home/jason/Documents/personal/herd-mentality/herd-mentality-venv/bin/python
+#!/Users/sanchayatajain/projects/herd-mentality/herd-mentality-venv/bin/python3.9
 # -*- coding: utf-8 -*-
 import re
 import sys
