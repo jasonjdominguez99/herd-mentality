@@ -6,7 +6,7 @@ from ariadne import (
 )
 from ariadne.constants import PLAYGROUND_HTML
 from flask import request, jsonify
-from .resolvers import (
+from resolvers import (
     card_mutation, card_query, player_mutation,
     player_query
 )

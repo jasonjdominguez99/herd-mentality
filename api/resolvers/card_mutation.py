@@ -1,4 +1,4 @@
-from ..models.models import Card
+from models.models import Card
 from ariadne import convert_kwargs_to_snake_case
 import uuid
 
