@@ -1,4 +1,4 @@
-from ..models.models import Card
+from models.models import Card
 import random
 
 def get_card(*_):

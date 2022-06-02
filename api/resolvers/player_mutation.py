@@ -1,4 +1,4 @@
-from ..models.models import Player
+from models.models import Player
 from ariadne import convert_kwargs_to_snake_case
 import uuid
 

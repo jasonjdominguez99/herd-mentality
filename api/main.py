@@ -6,7 +6,7 @@ from ariadne import (
 )
 from ariadne.constants import PLAYGROUND_HTML
 from flask import request, jsonify
-from .resolvers import (
+from resolvers import (
     card_mutation, card_query, player_mutation,
     player_query
 )
@@ -21,7 +21,7 @@ mutation.set_field("updatePlayer", player_mutation.update_player)
 mutation.set_field("createCard", card_mutation.create_card)
 mutation.set_field("updateCard", card_mutation.update_card)
 
-type_defs = gql(load_schema_from_path("schema/"))
+type_defs = gql(load_schema_from_path("/schema"))
 schema = make_executable_schema(
     type_defs, query, mutation, snake_case_fallback_resolvers
 )
