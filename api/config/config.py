@@ -8,7 +8,7 @@ import os
 
 user = "Jason"
 password = "purple-cow"
-host = "postgres"
+host = "sanchayata/herd-mentality:v0.1.0"
 database = "herd-mentality"
 port = "5432"
 
