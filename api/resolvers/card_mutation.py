@@ -1,4 +1,4 @@
-from models.models import Card
+from ..models.models import Card
 from ariadne import convert_kwargs_to_snake_case
 import uuid
 
@@ -12,3 +12,4 @@ def update_card(_, info, has_been_picked=None):
     card.update_has_been_picked(has_been_picked)
 
     return card
+    

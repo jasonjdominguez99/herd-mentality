@@ -1,8 +1,8 @@
 from email.policy import default
 from hashlib import new
-import flask_sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
+from api import db
 
-db = flask_sqlalchemy.SQLAlchemy()
 
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -36,6 +36,7 @@ class Player(db.Model):
 
     def update_answer(self, new_answer):
         self.answer = new_answer
+
 
 class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)

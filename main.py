@@ -1,4 +1,4 @@
-from __init__ import created_app
+from api import app
 from ariadne import (
     load_schema_from_path, make_executable_schema,
     graphql_sync, snake_case_fallback_resolvers,
@@ -6,7 +6,7 @@ from ariadne import (
 )
 from ariadne.constants import PLAYGROUND_HTML
 from flask import request, jsonify
-from resolvers import (
+from api.resolvers import (
     card_mutation, card_query, player_mutation,
     player_query
 )
@@ -26,8 +26,6 @@ schema = make_executable_schema(
     type_defs, query, mutation, snake_case_fallback_resolvers
 )
 
-app = created_app()
-
 @app.route("/graphql", methods=["GET"])
 def graphql_playground():
     return PLAYGROUND_HTML, 200
@@ -46,6 +44,4 @@ def graphql_server():
     status_code = 200 if success else 400
     return jsonify(result), status_code
 
-
-if __name__ == "__main__":
-    app.run()
+# app.run(host='0.0.0.0', port=5100)
