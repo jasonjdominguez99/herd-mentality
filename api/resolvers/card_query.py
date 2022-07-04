@@ -1,4 +1,4 @@
-from models.models import Card
+from ..models.models import Card
 import random
 
 def get_card(*_):
@@ -10,3 +10,4 @@ def get_card(*_):
     rand_card_id = available_card_ids[rand_idx]
 
     return Card.query.filter_by(id=rand_card_id)
+    
