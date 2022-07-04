@@ -1,7 +1,7 @@
 from email.policy import default
 from hashlib import new
 from flask_sqlalchemy import SQLAlchemy
-from api import db
+from .. import db
 
 
 class Player(db.Model):
